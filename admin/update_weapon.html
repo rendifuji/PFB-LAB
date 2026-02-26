@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/detail.css" />
+    <link rel="stylesheet" href="../css/weapon_form.css" />
+    <title>Severos - Update Weapon</title>
+  </head>
+  <body>
+    <nav>
+      <h2>Severos</h2>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="weapon_list.html">Weapon</a></li>
+      </ul>
+      <ul>
+        <li>Nathan</li>
+        <li><a href="">Logout</a></li>
+      </ul>
+    </nav>
+    <main>
+      <a class="back" href="weapon_detail.html">&larr; Back to Weapon Detail</a>
+      <div class="weapon">
+        <div class="weapon-desc">
+          <input
+            class="name-input"
+            type="text"
+            value='AR-70/223 "Urban Specter"'
+          />
+
+          <div class="field">
+            <label for="weapon-type"><strong>Type:</strong></label>
+            <select id="weapon-type" name="weapon-type">
+              <option value="handgun">Handgun</option>
+              <option value="assault-rifle" selected>Assault Rifle</option>
+              <option value="machine-gun">Machine Gun</option>
+              <option value="shotgun">Shotgun</option>
+              <option value="submachine-gun">Submachine Gun</option>
+              <option value="sniper-rifle">Sniper Rifle</option>
+              <option value="grenade-launcher">Grenade Launcher</option>
+              <option value="rocket-launcher">Rocket Launcher</option>
+              <option value="railgun">Railgun</option>
+              <option value="mortar">Mortar</option>
+              <option value="flamethrower">Flamethrower</option>
+              <option value="rifle">Rifle</option>
+              <option value="antimatter-sniper-rifle">
+                Antimatter Sniper Rifle
+              </option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="weapon-rarity"><strong>Rarity:</strong></label>
+            <select id="weapon-rarity" name="weapon-rarity">
+              <option value="rare" selected>RARE</option>
+              <option value="epic">EPIC</option>
+              <option value="legendary">LEGENDARY</option>
+            </select>
+          </div>
+        </div>
+        <div class="weapon-details">
+          <div class="trait">
+            <h3>Weapon Trait</h3>
+            <textarea name="trait" rows="4">
+A compact carbine crafted for fast engagement in urban labyrinths. Its lightweight frame allows seamless transitions between tight corridors and open vantage points. Enhanced trigger tuning ensures responsive handling under chaotic conditions.</textarea
+            >
+          </div>
+          <div class="weapon-stats">
+            <div class="stats">
+              <h3>Weapon Stats</h3>
+              <p>Damage: <input type="number" value="190" /></p>
+              <p>Fire Rate: <input type="number" value="56" /></p>
+              <p>Magazine Size: <input type="number" value="30" /></p>
+              <p>Recoil: <input type="number" value="18" /></p>
+            </div>
+            <div class="sales">
+              <h3>Weapon Sales</h3>
+              <p>Sold: <span>224</span></p>
+              <p>Stock: <input type="number" value="1300" /></p>
+              <p class="price">
+                Price: <span>$</span> <input type="number" value="87900" />
+              </p>
+            </div>
+          </div>
+          <button class="primary" type="button">Update Weapon</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 Severos</p>
+    </footer>
+  </body>
+</html>

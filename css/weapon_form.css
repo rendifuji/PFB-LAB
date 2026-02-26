@@ -1,0 +1,74 @@
+.weapon {
+  .weapon-desc {
+    .name-input {
+      width: 100%;
+      font-size: 2.75rem;
+      font-weight: bold;
+      background-color: #eee;
+      color: #111;
+      padding: 2rem;
+      border-radius: 0;
+      text-wrap: wrap;
+    }
+
+    .field {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      select {
+        border: 1px solid #555;
+        border-radius: 0.5rem;
+        background: transparent;
+        color: #fff;
+        padding: 0.5rem 0.75rem;
+      }
+
+      option {
+        background-color: #222;
+        color: #fff;
+      }
+    }
+  }
+
+  .weapon-details {
+    .trait {
+      textarea {
+        width: 100%;
+        border: 1px solid #555;
+        border-radius: 0.25rem;
+        background: transparent;
+        color: #fff;
+        padding: 0.75rem;
+        resize: vertical;
+      }
+    }
+
+    .weapon-stats {
+      display: flex;
+      gap: 2rem;
+      .stats,
+      .sales {
+        p {
+          text-wrap: nowrap;
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+        }
+
+        input {
+          width: 100%;
+          border: 1px solid #555;
+          border-radius: 0.25rem;
+          background: transparent;
+          color: #fff;
+          padding: 0.25rem 0.5rem;
+        }
+      }
+    }
+
+    .primary {
+      font-size: 0.75rem;
+    }
+  }
+}

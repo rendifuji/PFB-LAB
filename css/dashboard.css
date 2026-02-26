@@ -1,0 +1,174 @@
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  gap: 2.5rem;
+
+  &:first-of-type {
+    height: 400px;
+    gap: 1rem;
+
+    section {
+      padding-inline: 1rem;
+      border: 1px solid white;
+      border-radius: 0.75rem;
+
+      h3 {
+        text-align: center;
+        padding-block: 1rem;
+        border-bottom: 1px solid white;
+      }
+    }
+    .monthly {
+      flex-basis: 70%;
+
+      .chart {
+        width: 100%;
+        height: calc(100% - 57px);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-block: 0.75rem;
+
+        .month {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 0.25rem;
+
+          .bars {
+            display: flex;
+            align-items: flex-end;
+            gap: 0.1rem;
+            height: 100%;
+
+            .transactions, .revenue {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              align-items: center;
+              height: 100%;
+
+              .value {
+                font-size: 0.45rem;
+                margin-bottom: 0.2rem;
+                color: #eee;
+              }
+            }
+            
+
+            .bar {
+              width: 30px;
+              min-height: 2px;
+              border-radius: 0;
+            }
+
+            .transactions .bar {
+              background-color: #5fd365;
+            }
+
+            .revenue .bar {
+              background-color: #4ba6f8;
+            }
+          }
+
+          .name {
+            margin-top: 0.2rem;
+            font-size: 0.6rem;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .recent {
+      flex-basis: 30%;
+
+      ul {
+        overflow-y: scroll;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        gap: 0.25rem;
+        flex-direction: column;
+        padding-bottom: 1rem;
+
+        li {
+          padding: 0.5rem 0.25rem;
+          width: 100%;
+          border-radius: 0.25rem;
+          display: flex;
+          justify-content: space-between;
+          border: 1px solid white;
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+
+  > section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .table {
+      border: 1px solid white;
+      border-radius: 0.75rem;
+      overflow: hidden;
+
+      h3 {
+        background-color: white;
+        color: black;
+        padding: 0.5rem 1.5rem;
+      }
+
+      > p {
+        padding: 1rem 1.5rem;
+        font-size: 1.5rem;
+        font-weight: bolder;
+      }
+
+      ul {
+        list-style: none;
+        padding-block: 1rem;
+        padding-inline: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        li {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+    .table:last-of-type {
+      flex: 1;
+    }
+
+    &.forms .content {
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+
+      input {
+        padding-block: 0.75rem;
+        border-radius: 0.25rem;
+        color: black;
+      }
+
+      button {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
