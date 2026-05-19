@@ -1,3 +1,11 @@
+<?php
+
+
+
+?>
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,7 +26,7 @@
         </header>
         <div class="credentials">
           <p>Create your account by filling in the information below.</p>
-          <form action="">
+          <form action="store.php" method="POST">
             <label for="text">Username</label>
             <input
               type="text"
@@ -40,7 +48,7 @@
               name="password"
               placeholder="Enter your password (min. 8 characters)"
             />
-            <button type="submit">Register</button>
+            <button type="submit" value="save" name="save">Register</button>
           </form>
         </div>
         <p>Already have an account? <a href="login.html">Login here</a>.</p>
