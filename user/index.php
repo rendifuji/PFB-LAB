@@ -1,3 +1,10 @@
+<?php
+
+  require_once __DIR__ . '/../aunth/functions.php';
+
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,16 +14,9 @@
     <title>Severos - Home</title>
   </head>
   <body>
-    <nav>
-      <h2>Severos</h2>
-      <ul>
-        <li><a href="../auth/login.html">Login</a></li>
-        <li>|</li>
-        <li><a href="../auth/register.html">Register</a></li>
-      </ul>
-    </nav>
+    <?php render_nav(); ?>
     <main>
-      <div class="image-slider"><img src="assets/Home.jpeg" alt="" /></div>
+      <div class="image-slider"><img src="../assets/Home.jpeg" alt="" /></div>
       <div class="tagline">
         <p>
           "Severos Blackmarket is not just a store - it's a survival network."
