@@ -22,12 +22,27 @@
         $UserPassword = $_POST['password'];
     }
 
+    
+
     if($Username == '' || $Email == ''|| $UserPassword ==''){
         echo "The form cannot be empty";
         header("location: register.php");
     }
+
+    if (strlen($Username) < 8){
+        echo"Username must atleast be 8 characters long";
+        return;
+    }
+
+    if (strlen($UserPassword) < 8){
+        echo"Password must atleast contain 8 characters";
+        return;
+    }
+
+
     else{
-        $query= "Insert into msuser values ('$userid','$Username','$UserPassword','$Email','$Credit','$Role')";
+        $hash = password_hash($UserPassword,PASSWORD_BCRYPT);
+        $query= "Insert into msuser values ('$userid','$Username','$hash','$Email','$Credit','$Role')";
 
         mysqli_query($conn,$query);
         echo "data enterred succesfully";
