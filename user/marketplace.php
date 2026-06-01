@@ -36,7 +36,7 @@ if (isset($_GET['apply'])) {
 $sql .= ' ORDER BY w.weaponName';
 $query = $conn -> prepare($sql);
 if ($params) {
-    $query -> bind_param($bindTypes, $params);
+    $query -> bind_param($bindTypes, ...$params);
 }
 $query -> execute();
 $weapons = $query -> get_result();
