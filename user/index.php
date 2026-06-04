@@ -1,6 +1,6 @@
 <?php
 
-  require_once __DIR__ . '/../aunth/functions.php';
+  require_once __DIR__ . '/../includes/functions.php';
 
 ?>
 
@@ -14,7 +14,7 @@
     <title>Severos - Home</title>
   </head>
   <body>
-    <?php render_nav(); ?>
+    <?php include __DIR__ . '/../includes/navbar.php'; ?>
     <main>
       <div class="image-slider"><img src="../assets/Home.jpeg" alt="" /></div>
       <div class="tagline">
@@ -24,8 +24,6 @@
         <p>"Every weapon has a story. Every buyer, a purpose."</p>
       </div>
     </main>
-    <footer>
-      <p>&copy; 2025 Severos</p>
-    </footer>
+    <?php include __DIR__ . '/../includes/footer.php'; ?>
   </body>
 </html>

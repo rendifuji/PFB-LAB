@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../aunth/functions.php';
+require_once __DIR__ . '/../includes/functions.php';
 
 $user = require_role('member');
 $search = trim($_GET['search'] ?? '');
@@ -51,7 +51,7 @@ $weapons = $query -> get_result();
     <title>Severos - Marketplace</title>
   </head>
   <body>
-    <?php render_nav('member'); ?>
+    <?php include __DIR__ . '/../includes/navbar.php'; ?>
     <main>
       <header>
         <h1>Marketplace</h1>
@@ -104,8 +104,6 @@ $weapons = $query -> get_result();
         </aside>
       </div>
     </main>
-    <footer>
-      <p>&copy; 2025 Severos</p>
-    </footer>
+    <?php include __DIR__ . '/../includes/footer.php'; ?>
   </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../aunth/functions.php';
+require_once __DIR__ . '/../includes/functions.php';
 
 $admin = require_role('admin');
 $errors = [];
@@ -78,7 +78,7 @@ $payments = $conn->query('SELECT paymentType FROM mspayment ORDER BY paymentType
     <title>Severos - Admin Dashboard</title>
   </head>
   <body>
-    <?php render_nav('admin'); ?>
+    <?php include __DIR__ . '/../includes/navbar.php'; ?>
     <main>
       <div class="row">
         <section class="monthly">
@@ -212,8 +212,6 @@ $payments = $conn->query('SELECT paymentType FROM mspayment ORDER BY paymentType
         </section>
       </div>
     </main>
-    <footer>
-      <p>&copy; 2025 Severos</p>
-    </footer>
+    <?php include __DIR__ . '/../includes/footer.php'; ?>
   </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../aunth/functions.php';
+require_once __DIR__ . '/../includes/functions.php';
 
 $user = require_role('member');
 $search = trim($_GET['search'] ?? '');
@@ -55,7 +55,7 @@ $rarityOptions = ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary'];
     <title>Severos - Arsenal</title>
   </head>
   <body>
-    <?php render_nav('member'); ?>
+    <?php include __DIR__ . '/../includes/navbar.php'; ?>
     <main>
       <header>
         <h1>Arsenal</h1>
@@ -113,8 +113,6 @@ $rarityOptions = ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary'];
         </aside>
       </div>
     </main>
-    <footer>
-      <p>&copy; 2025 Severos</p>
-    </footer>
+    <?php include __DIR__ . '/../includes/footer.php'; ?>
   </body>
 </html>

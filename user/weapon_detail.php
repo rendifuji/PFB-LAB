@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../aunth/functions.php';
+require_once __DIR__ . '/../includes/functions.php';
 
 $user = require_role('member');
 $weaponId = $_GET['id'] ?? '';
@@ -21,7 +21,7 @@ if (!$weapon) {
     <title>Severos - Weapon Detail</title>
   </head>
   <body>
-    <?php render_nav('member'); ?>
+    <?php include __DIR__ . '/../includes/navbar.php'; ?>
     <main>
       <a class="back" href="marketplace.php">&larr; Back to Marketplace</a>
       <div class="weapon">
@@ -54,8 +54,6 @@ if (!$weapon) {
         </div>
       </div>
     </main>
-    <footer>
-      <p>&copy; 2025 Severos</p>
-    </footer>
+    <?php include __DIR__ . '/../includes/footer.php'; ?>
   </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../aunth/functions.php';
+require_once __DIR__ . '/../includes/functions.php';
 
 $admin = require_role('admin');
 $types = weapon_type_options($conn);
@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Severos - Add Weapon</title>
   </head>
   <body>
-    <?php render_nav('admin'); ?>
+    <?php include __DIR__ . '/../includes/navbar.php'; ?>
     <main>
       <a class="back" href="weapon_list.php">&larr; Back to Weapon List</a>
       <?php if ($errors): ?>
@@ -130,8 +130,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
       </form>
     </main>
-    <footer>
-      <p>&copy; 2025 Severos</p>
-    </footer>
+    <?php include __DIR__ . '/../includes/footer.php'; ?>
   </body>
 </html>
