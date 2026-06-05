@@ -151,8 +151,44 @@ h3 {
 }
 
 .image-slider {
-  img {
-    min-width: 600px;
+  text-align: center;
+
+  .slider-box {
+    position: relative;
+    display: inline-block;
+  }
+
+  .slide {
+    display: none;
+    width: 600px;
+    max-width: 100%;
+    border: 1px solid #666;
+  }
+
+  .slide.active {
+    display: block;
+  }
+
+  .slider-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    border-radius: 50%;
+    background-color: #bbb;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background-color: royalblue;
   }
 }
 
